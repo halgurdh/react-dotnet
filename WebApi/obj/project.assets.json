@@ -1540,11 +1540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\halgu\\source\\repos\\WebApi\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "G:\\Projects\\react-dotnet\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\halgu\\source\\repos\\WebApi\\WebApi\\WebApi.csproj",
+      "projectPath": "G:\\Projects\\react-dotnet\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\halgu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\halgu\\source\\repos\\WebApi\\WebApi\\obj\\",
+      "outputPath": "G:\\Projects\\react-dotnet\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\halgu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1610,7 +1610,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
