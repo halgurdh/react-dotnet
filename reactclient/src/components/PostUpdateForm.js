@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import Constants from "../utilities/Constants";
 
 export default function PostUpdateForm(props) {
-  const initialFormData = Object.freeze({
-    title: props.post.title,
-    content: props.post.content,
+    const [formData, setFormData] = useState({
+      title: props.post.title,
+      content: props.post.content
   });
-
-  const [formData, setFormData] = useState([initialFormData]);
 
   const handleChange = (e) => {
     setFormData({
@@ -49,7 +47,7 @@ export default function PostUpdateForm(props) {
   return (
     <div>
       <form className="w-100 px-5">
-        <h1 className="mt-5">Update Post: "{props.post.title}".</h1>
+        <h1 className="mt-5">Update Post: "{formData.title}".</h1>
 
         <div className="mt-5">
           <label className="h3 form-label">Title</label>

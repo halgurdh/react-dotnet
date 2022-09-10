@@ -94,7 +94,9 @@ export default function App() {
                   >
                     Update
                   </button>
-                  <button className="btn btn-secondary btn-lg">Delete</button>
+                  <button 
+                  onClick={() => setDelete(post.postId)}
+                  className="btn btn-secondary btn-lg">Delete</button>
                 </td>
               </tr>
             ))}
@@ -143,5 +145,42 @@ export default function App() {
     setPosts(postsCopy);
 
     alert(`Post updated: title "${updatedPost.title}"}`);
+  }
+
+  function setDelete(postId) {
+    const url = `${Constants.API_URL_DELERE_POST_BY_ID}/${postId}`;
+
+    if(window.confirm("Are you sure you want to delete this post?")){
+      fetch(url, {
+        method: "Delete",
+      })
+        .then((response) => response.json())
+        .then((reponseFromServer) => {
+          console.log(reponseFromServer);
+          onPostDeleted(postId);
+        })
+        .catch((error) => {
+          console.log(error);
+          alert(error);
+        });
+    }
+  }
+
+  function onPostDeleted(deletedPost) {
+    let postsCopy = [...posts];
+
+    const index = postsCopy.findIndex((postsCopyPost, currentIndex) => {
+      if (postsCopyPost.postId === deletedPost.postId) {
+        return true;
+      }
+    });
+
+    if (index !== -1) {
+      postsCopy.splice(index, 1);
+    }
+
+    setPosts(postsCopy);
+
+    alert(`Post Deleted: title "${deletedPost.title}"}`);
   }
 }
