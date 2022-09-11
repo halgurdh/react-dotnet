@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Constants from "../utilities/Constants";
 
 export default function PostCreateForm(props) {
-  const initialFormData = Object.freeze({
-    title: "Post Title",
-    content: "Here comes the content of the post",
-  });
 
-  const [formData, setFormData] = useState([initialFormData]);
+  const [formData, setFormData] = useState({
+    title: "Post Title",
+    content: "Here comes the content of the post"
+  });
 
   const handleChange = (e) => {
     setFormData({
